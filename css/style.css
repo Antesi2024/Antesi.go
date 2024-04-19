@@ -1,0 +1,528 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+:root {
+  --main-color: #ffdf2b;
+  --txt-color: #282120;
+  --scnd-color: #cfcfcf;
+  --gradient: linear-gradient(#022b61, #0f0f0f);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #282120;
+  color: #ffdf2b;
+  overflow-x: hidden;
+}
+
+/* Custom Schroll Bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+/* Custom Navbar */
+section {
+  padding: 50px 100px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #010101;
+  padding: 15px 100px;
+  transition: all ease 0.45s;
+}
+
+/* Navbar */
+.img-nav img {
+  width: 53px;
+}
+
+.img-nav {
+  animation: slideRight 1s ease forwards;
+}
+.navbar {
+  display: flex;
+  animation: slideLeft 1s ease backwards;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: #ffff;
+  font-weight: 500;
+  transition: all ease 0.45s;
+}
+/* Navbar Hover After */
+.navbar a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.7s;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+/* Navbar */
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999999;
+  display: none;
+}
+.header-btn a {
+  padding: 10px 20px;
+  color: var(--txt-color);
+  font-weight: 500;
+}
+
+/* Home */
+.home {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #282120;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bg img {
+  width: 100rem;
+}
+
+.sosmed {
+  position: absolute;
+  top: 40%;
+  padding: 0 8rem;
+}
+
+.sosmed i {
+  display: block;
+  margin: 25px 0;
+  color: #ffdf2b;
+  font-size: 2rem;
+}
+
+.sosmed a {
+  animation: slideTop 1s ease forwards;
+}
+
+/* Service */
+.service,
+.ride-list,
+.footer,
+.price-list {
+  padding: 7rem 7% 1.4rem;
+  min-height: 100vh;
+}
+
+.service-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+  width: 100%;
+  align-items: center;
+}
+
+.service h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffdf2b;
+  text-transform: uppercase;
+  animation: slideTop 1s ease forwards;
+}
+
+.service h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffdf2b;
+  animation: slideTop 1s ease forwards;
+}
+
+.service h4 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #010101;
+}
+
+.service p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #010101;
+  padding-top: 5px;
+}
+
+.service li {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #010101;
+}
+
+.service-card {
+  width: 25%;
+  margin: 15px;
+  box-sizing: border-box;
+  float: left;
+  border-radius: 20px;
+  background: #ffdf2b;
+  text-align: center;
+  padding-top: 10px;
+  animation: slideRight 1s ease forwards;
+}
+
+.service-cardd {
+  width: 30%;
+  margin: 5px;
+  box-sizing: border-box;
+  float: left;
+  border-radius: 20px;
+  background: #ffdf2b;
+  text-align: center;
+  animation: slideLeft 1s ease forwards;
+}
+
+.service-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 2px auto;
+  display: block;
+}
+
+.service-title {
+  margin: 1.2rem auto 0.5rem;
+}
+
+.service .btn {
+  display: flex;
+  justify-content: center;
+  background: #010101;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin-top: 25px;
+}
+
+.service .btn-jastip {
+  display: flex;
+  justify-content: center;
+  background: #010101;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin-top: 3px;
+}
+
+.service-button {
+  background: #010101;
+}
+
+/* Price List */
+.price-list h1 {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  animation: slideTop 1s ease forwards;
+}
+
+.price-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-img img {
+  width: 60%;
+  height: 70%;
+  margin: 2rem;
+  animation: slideLeft 1s ease forwards;
+}
+
+/* Ride List */
+
+.ride-heading {
+  text-align: center;
+}
+
+.ride-heading h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  animation: slideTop 1s ease forwards;
+}
+
+.ride-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ride-box {
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 11px #cfcfcf;
+  background: #ffdf2b;
+  animation: slideTop 1s ease forwards;
+}
+
+.ride-img {
+  width: 100%;
+  height: 200px;
+}
+
+.ride-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ride-box h3 {
+  font-weight: 500;
+  text-align: center;
+  color: #010101;
+}
+
+.ride-box .btn {
+  display: flex;
+  justify-content: center;
+  background: #010101;
+  color: #fff;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #ffdf2b;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.1rem 0;
+  margin-top: 2rem;
+}
+
+.sosmed-footer {
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+.sosmed-footer a,
+.link a,
+.credit a {
+  color: #010101;
+  margin: 1rem;
+}
+
+.sosmed-footer a:hover,
+.link a:hover {
+  color: #282120;
+}
+
+.link {
+  margin-bottom: 1rem;
+}
+
+.credit p {
+  color: #282120;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 991px) {
+  header {
+    padding: 18px 40px;
+  }
+
+  section {
+    padding: 50px 40px;
+  }
+
+  .home .bg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .price-list {
+    width: 45%;
+  }
+
+  .service-card {
+    width: 45%;
+  }
+
+  .service-cardd {
+    width: 45%;
+  }
+}
+
+@media (max-width: 881px) {
+  .home {
+    background-position: left;
+  }
+
+  .price-list {
+    width: 100%;
+    height: auto;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .service-cardd {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+  header {
+    padding: 11px 40px;
+  }
+  section {
+    padding: 20px;
+  }
+  #menu-icon {
+    display: initial;
+  }
+  .home {
+    width: 100%;
+  }
+
+  .price-list {
+    width: 100%;
+    height: auto;
+  }
+
+  .sosmed {
+    display: flex;
+    top: 60%;
+  }
+  .sosmed a {
+    font-size: 10rem;
+    margin: 1.5rem;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #010101;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.2 ease;
+    text-align: left;
+  }
+
+  .navbar.active {
+    top: 100%;
+  }
+
+  .navbar a {
+    padding: 1rem;
+    border-left: 2px solid #ffdf2b;
+    margin: 1rem;
+    display: block;
+  }
+  .navbar a:hover {
+    color: #ffdf2b;
+  }
+}
+
+/* Animation */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
